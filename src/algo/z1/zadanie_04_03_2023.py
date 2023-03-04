@@ -16,3 +16,4 @@ def calculate(fn, a, b):
     return fn(a,b)
 
 print(calculate(add,2,4))
+print(calculate(mul,5,6))
