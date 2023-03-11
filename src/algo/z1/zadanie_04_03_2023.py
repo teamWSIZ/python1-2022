@@ -1,4 +1,4 @@
-#napisać funkcje: add(a,b) oraz mul(a,b) pierwsza zwracająca a+b, druga a*b
+#napisać funkcje: add(a,b) oraz mul(a,b) pierwsza zwracająca a+b, druga a*b.
 
 def add(a,b):
     return (a+b)
