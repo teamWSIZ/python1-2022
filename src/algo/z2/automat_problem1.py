@@ -4,20 +4,31 @@ from random import seed, randint
 
 
 def generate_data(data_size):
-    # tutaj wstawić coś co generuje dane dla naszego algorytmu
-    return [randint(0, 10 ** 6) for _ in range(data_size)]
-
+    data_list = []
+    for _ in range(data_size*2):
+        data_list.append(randint(1,100))
+    return data_list
 
 def solve_problem(data):
-    # tutaj wstawić algorytm który rozwiązuje dany problem dla danych `data
-    pass
+    result = []
+#Wersja list
+    # a, b = data[::2], data[1::2]
+#Wersja set
+    a = list(set(data[::2]))
+    b = list(set(data[1::2]))
+    for i in range (len(a)):
+        counter = 0
+        for j in range (len(b)):
+            if b[j]%a[i]==0: counter+=1
+        result.append(counter)
+    return result
 
 
 def run_tests(generator, solver):
     size = 10
     sizes = []
     times = []
-    while size < 100000:
+    while size < 1000:
         print(f'testing solver for {size=}')
         data = generator(size)
         REPETITIONS = 400
