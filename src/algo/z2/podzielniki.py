@@ -4,11 +4,7 @@ from automat import run_tests, visualize
 
 
 def solve(a: list[int], b: list[int]) -> list[int]:
-    result = []
-#Wersja list
-    # a, b = data[::2], data[1::2]
-#Wersja set
-    
+    result = []    
     for i in range (len(a)):
         counter = 0
         for j in range (len(b)):
