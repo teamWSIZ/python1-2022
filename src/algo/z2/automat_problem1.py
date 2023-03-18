@@ -28,7 +28,7 @@ def run_tests(generator, solver):
     size = 10
     sizes = []
     times = []
-    while size < 1000:
+    while size < 9000:
         print(f'testing solver for {size=}')
         data = generator(size)
         REPETITIONS = 400
