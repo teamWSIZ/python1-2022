@@ -1,18 +1,17 @@
-from datetime import datetime
+d = dict()
 
-def sort_numbers(nums: list[int]) -> list[int]:
-    ret = sorted(nums)
-    return ret
+d['a'] = 10
+d['b'] = 12
+
+print(d)
 
 
-if __name__ == '__main__':
-    w = [1 ,53,2 , 6, 100,3 ,2 ,7 ]
-    repetitions = 1000
-    time_sum = 0
-    for i in range(repetitions):
-        st = datetime.now().timestamp()
-        ret = sort_numbers(w)
-        en = datetime.now().timestamp()
-        time_sum += (en-st)
+def f(a, b, c):
+    print(a, b, c)
 
-    print(f'czas wykowyaniwa {time_sum / repetitions: .6f} s')
+
+f(a=12, b=10, c=8)
+
+
+
+f(**d, c=11)
