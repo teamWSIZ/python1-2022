@@ -35,6 +35,6 @@ def get_city_most_connections(train_data: list[tuple[int,int]]) -> int:
 
 
 if __name__ == '__main__':
-    rr = generate_data(10**6)
+    rr = generate_data(100)
     print(rr)
     get_city_most_connections(rr)
