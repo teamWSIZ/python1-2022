@@ -28,13 +28,18 @@ def thinkAgentThink(possibilities):
     return possibilities[randint(0, len(possibilities)-1)]
 
 
-def iGoByTrain(name, map, where_istart):
+def iGoByTrain(name, map, where_istart, cycles):
+    
     possible_dest = nextStop(where_istart, map)
     if len(possible_dest) > 1:
         possible_dest = thinkAgentThink(possible_dest)
     print("I", name, "am going to ", possible_dest)
+    while cycles > 0:
+        cycles -= 1
+        iGoByTrain(name, map, possible_dest[0], cycles)
 
-print(iGoByTrain("john", current_map, 1))
+
+print(iGoByTrain("john", current_map, 1, 4))
 
 
     
