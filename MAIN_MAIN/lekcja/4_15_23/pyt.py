@@ -2,7 +2,7 @@
 # czy elementy tej listy są unikalne
  # podobnie jak w (A) -- ale w przypadku istnienia duplikatów proszę wypisać stringi które się powtarzają
 
-s=['aa', 'a', 'c', 'bb']
+s=['aa', 'a','c', 'bb']
 
 def czy_sa_unikalne(w):
 
@@ -16,9 +16,13 @@ def czy_sa_unikalne(w):
      return False
 
 def czy_sie_powtarzają(w):
-    for x in range(len(w)):
-        for y in range(len(w)):
-            if w[x] == w[y]:
+    wyn = set()
+    for x in w:
+        if w.count(x) > 1: wyn.add(x)
+    if len(wyn) ==0:
+        return False
+    return True, wyn
+
 
 
 print(czy_sa_unikalne(s))
