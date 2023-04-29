@@ -12,11 +12,6 @@ class DumbShip(Ship):
         v = state.speed
         maxT = state.max_thrust
 
-        if h > 5:
-            thrust = 0
-        if h > 3:
-            thrust = state.max_thrust * 0.77
-        else:
-            thrust = 10.1
+
 
         return ThrustVectors(a_vertical=thrust)
