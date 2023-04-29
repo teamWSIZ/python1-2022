@@ -7,14 +7,9 @@ def id_filter(data):
 
         id1 ,name = x
         duplicated_id = []
-        print(id1)
-        y = 2
-        for y in range(len(data)):
 
-            id2, name2 = data[y]
-            print(id2)
-            if id1 == id2:
-                duplicated_id.append(id2)
+        y = 2
+        print(data.count(x))
 
     return duplicated_id
 
