@@ -23,7 +23,7 @@ mass = 1
 
 # symulacja
 i = 0
-while t < 20000:
+while t < 2000:
     if mass > 0.5:
         acceleration = thrust / mass - g
         mass -= thrust * 0.01 * dt

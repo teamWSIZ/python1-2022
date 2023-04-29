@@ -1,18 +1,12 @@
 # const
 dt = 0.001
-g = 10
-MAX_THRUST = 20
+a = 10
 
 # vars
 s = 0
 v = 0
 t = 0
 
-
-thrust = MAX_THRUST * 0.80
-mass = 100
-
-# g == gravity
 # a == acceleration
 # t = time
 # v = velocity
@@ -24,13 +18,10 @@ mass = 100
 
 
 # symulacja
-while t < 20:
-    acc = (thrust / mass) - g
-    mass -= thrust * 0.01 * dt
+while t < 10:
     s += v * dt
-    v += acc * dt
+    v += a * dt
     t += dt
-    print(f'{s}')
 
 print(s)
-print(g * t ** 2 / 2)
+print(a * t ** 2 / 2)
