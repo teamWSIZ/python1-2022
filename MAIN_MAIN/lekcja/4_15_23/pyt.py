@@ -9,11 +9,9 @@ def czy_sa_unikalne(w):
     s = set(w)
 
     if len(w) == len(s):
-
         return  True
     else:
-
-     return False
+        return False
 
 def czy_sie_powtarzają(w):
     wyn = set()
