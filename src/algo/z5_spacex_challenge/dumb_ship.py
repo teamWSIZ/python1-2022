@@ -12,17 +12,22 @@ class DumbShip(Ship):
         v = state.speed
         maxT = state.max_thrust
 
-        if h > 12:
-            thrus = 0
-        if h > 6:
-            thrus = state.max_thrust * 0.9
+        # plan = [DescentStep(5, -9, 1000), DescentStep(1, -1, 500), DescentStep(0.3, -0.5, 50)]
+        plan = [DescentStep(7, -9, 1000), DescentStep(5, -9, 100), DescentStep(1, -1, 100), DescentStep(0.3, -0.6, 400)]
+
+        for step in plan:
+            if h > step.height:
+                goal = step.target_velocity
+                reactiveness = step.reactiveness
+                break
         else:
-            thrus = 10
-        return ThrustVectors(a_vertical=thrus)
+            goal = -0.1
+            reactiveness = 75
+        thr = get_velocity_stabilize_thrust(maxT, reactiveness, goal, v)
 
+        if debug:
+            print(f'\t{thr=:6.1f},\t{goal=},\t{v=:.2f}')
 
-
-
-        return ThrustVectors(a_vertical=thrust)
+        return ThrustVectors(a_vertical=thr)
 
 
