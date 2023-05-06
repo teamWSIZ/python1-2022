@@ -1,4 +1,4 @@
-from src.algo.z5_spacex_challenge.model import *
+from model import *
 from my_helpers.velo_control import *
 
 # veloship jest ship-em
@@ -7,7 +7,7 @@ class VeloShip(Ship):
     def initialize(self, state: ShipState):
         pass
 
-    def get_thrust_vectors(self, time: float, state: ShipState, debug=True) -> ThrustVectors:
+    def get_thrust_vectors(self, time: float, state: ShipState, debug=False) -> ThrustVectors:
         h = state.height
         v = state.speed
         maxT = state.max_thrust
