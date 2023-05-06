@@ -12,7 +12,7 @@ class VeloShip(Ship):
         v = state.speed
         maxT = state.max_thrust
 
-        plan = [DescentStep(5, -9, 1000), DescentStep(1, -1, 500), DescentStep(0.3, -0.5, 50)]
+        plan = [DescentStep(5, -9, 1000), DescentStep(1, -1, 400), DescentStep(0.3, -0.2, 25)]
 
         for step in plan:
             if h > step.height:
