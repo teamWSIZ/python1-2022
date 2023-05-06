@@ -1,4 +1,4 @@
-from src.algo.z5_spacex_challenge.model import *
+from model import *
 from my_helpers.velo_control import *
 
 # veloship jest ship-em
@@ -13,6 +13,8 @@ class VeloShip(Ship):
         maxT = state.max_thrust
 
         plan = [DescentStep(5, -9, 1000), DescentStep(1, -1, 500), DescentStep(0.3, -0.5, 50)]
+        # plan = [DescentStep(5, -9, 1000), DescentStep(1, -1, 100), DescentStep(0.3, -0.6, 400)]
+
 
         for step in plan:
             if h > step.height:
@@ -21,7 +23,7 @@ class VeloShip(Ship):
                 break
         else:
             goal = -0.1
-            reactiveness = 30
+            reactiveness = 75
         thr = get_velocity_stabilize_thrust(maxT, reactiveness, goal, v)
 
         if debug:
