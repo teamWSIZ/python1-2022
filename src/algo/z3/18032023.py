@@ -10,10 +10,10 @@ def largest_sum_10_percent(a: list[int]) -> int:
  k = n // 10
  max_sum = float('-inf')
  for i in range(n-k+1):
- subarray_sum = sum(a[i:i+k])
- if subarray_sum > max_sum:
- max_sum = subarray_sum
- return max_sum
+    subarray_sum = sum(a[i:i+k])
+    if subarray_sum > max_sum:
+        max_sum = subarray_sum
+        return max_sum
 
 #B
 
