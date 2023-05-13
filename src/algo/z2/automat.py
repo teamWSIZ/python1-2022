@@ -44,7 +44,9 @@ def visualize(sizes, times):
     x = sizes
     y = times
     linxx = [0.01 * x_ ** 1 for x_ in x]
+
     alg_n_sqrt_n = [0.01 * x_ ** 1.5 for x_ in x]
+
     quadx = [0.01 * x_ ** 2 for x_ in x]
     cubex = [0.01 * x_ ** 3 for x_ in x]
 
