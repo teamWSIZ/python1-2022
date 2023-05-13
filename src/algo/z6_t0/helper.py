@@ -2,5 +2,7 @@ from model import Fraction
 
 
 def add(f1: Fraction, f2: Fraction) -> Fraction:
-    # write me
-    return f1  # obviously false
+    f1.number = f1.number*f2.denominator + f2.number*f1.denominator
+    f1.denominator = f1.denominator*f2.denominator
+    
+    return f1  
