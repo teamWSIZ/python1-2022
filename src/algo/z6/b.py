@@ -8,14 +8,6 @@ def unique(list1):
     if x not in unique_list:
       unique_list.append(x)
   if len(repeated_list) > 0:
-<<<<<<< HEAD
-    print("Lista nieunikalna, powtórzone elementy: " , repeated_list)
-  else:
-    print("Lista unikalna")
-
-#tests
-list1 = ['aa', 'a', 'c', 'bb',]
-=======
     print("not unique, repeated items: " , repeated_list)
   else:
     print("unique")
@@ -36,4 +28,3 @@ unique(list3)
 list4 = ['aa', 'a', 'c', 'bb', 'bb', 'a']
 print(list4)
 unique(list4)
->>>>>>> c860fc8678d2a9d3f9133f8b49d626a6b2a2c3b1
