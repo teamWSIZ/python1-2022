@@ -13,8 +13,6 @@ jeśli długości *'ek klucza + długości #'ów zamka są dla wszystkich takie 
 """
 
 
-key = [1,1]
-lock = [2,2]
 
 def open_lock(key: list[int], lock: list[int]) -> int:
 
