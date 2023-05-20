@@ -13,7 +13,6 @@ aba←→ac -> abac
 (czyli dołączana sylaba 2-literowa ma mieć taką pierwszą literę, jak ostatnia litera słowa do którego jest dołączana)
 
 """
-word = 'abc'
 
 def split_to_syllables(word: str) -> list[str]:
     if len(word) < 2:
