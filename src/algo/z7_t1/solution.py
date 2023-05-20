@@ -1,4 +1,4 @@
-
+import unittest
 """
 Słowa sklejamy z sylab w następujący sposób:
 
@@ -16,5 +16,13 @@ aba←→ac -> abac
 
 
 def split_to_syllables(word: str) -> list[str]:
-    #todo: your solution here
-    return ["aa", "ab", "bb"]
+    if len(word) < 2:
+        return 'Word has to be at least 2 characters'
+    else:
+        list_of_syllables = []
+        for i in range(len(word)-1):
+            syllable = word[i]+word[i+1]
+            list_of_syllables.append(syllable)
+        return list_of_syllables
+
+
