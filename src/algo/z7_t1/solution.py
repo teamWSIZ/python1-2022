@@ -1,4 +1,4 @@
-
+import unittest
 """
 Słowa sklejamy z sylab w następujący sposób:
 
@@ -14,6 +14,7 @@ aba←→ac -> abac
 
 """
 
+
 def split_to_syllables(word: str) -> list[str]:
     if len(word) < 2:
         return 'Word has to be at least 2 characters'
@@ -24,5 +25,4 @@ def split_to_syllables(word: str) -> list[str]:
             list_of_syllables.append(syllable)
         return list_of_syllables
 
-result = split_to_syllables(word)
-print(result)
+
