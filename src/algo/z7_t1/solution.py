@@ -16,5 +16,13 @@ aba←→ac -> abac
 
 
 def split_to_syllables(word: str) -> list[str]:
-    #todo: your solution here
-    return ["aa", "ab", "bb"]
+    result = []
+    # first = word[0]
+    # last = word[-1]
+    # result.append(first*2)
+    for i in range(len(word) - 1):
+        short = word[i] + word[i+1]
+        result.append(short)
+    # result.append(last*2)
+    return result
+
