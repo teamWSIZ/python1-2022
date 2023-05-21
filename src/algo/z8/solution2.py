@@ -19,5 +19,17 @@ Zadanie -- mamy dostępny zbiór sylab, oraz pewne słowo `word`; pytanie -- czy
 
 
 def construct_word(syllables: set[str], word: str) -> bool:
-    #todo: your solution here
-    return True
+    if len(word) < 2:
+        return 'Word has to be at least 2 characters'
+    else:
+        list_of_syllables = []
+        for i in range(len(word)-1):
+            syllable = word[i]+word[i+1]
+            list_of_syllables.append(syllable)
+        for j in list_of_syllables:
+            if j in syllables:
+                continue 
+            else:
+                return False 
+                break
+        return True
