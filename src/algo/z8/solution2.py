@@ -19,5 +19,9 @@ Zadanie -- mamy dostępny zbiór sylab, oraz pewne słowo `word`; pytanie -- czy
 
 
 def construct_word(syllables: set[str], word: str) -> bool:
-    #todo: your solution here
-    return True
+    lst = []
+    for i in range(len(word) - 1):
+        syllable = word[i] + word[i + 1]
+        lst.append(syllable)
+    result = set(lst).issubset(syllables)
+    return result
