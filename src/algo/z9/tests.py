@@ -9,7 +9,6 @@ class SyllablesTest(unittest.TestCase):
         self.assertTrue(equalize_parity([1, 1]))
         self.assertTrue(equalize_parity([1, 2]))
         self.assertTrue(equalize_parity([2, 2]))
-
         self.assertFalse(equalize_parity([2, 3]))  # all elems of b must be >0
 
     def test_2(self):
