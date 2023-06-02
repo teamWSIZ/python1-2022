@@ -12,12 +12,22 @@ np.
 """
 
 
+def parse_version(version: str) -> list[int]:
+    return [int(x) for x in version.split('.')]
+
+
+def verbose_version(version: list[int]):
+    return '.'.join([str(x) for x in version])
+
+
 def get_latest(versions: list[str]) -> str:
     """
     :return: Latest semantic version from the given `versions`
     """
-    # todo: your code
-    return '0.0.1'
+    max_ = [0, 0, 0]
+    for v in versions:
+        max_ = max(max_, parse_version(v))
+    return verbose_version(max_)
 
 
 def next_version(version: str, level: int) -> str:
@@ -27,4 +37,14 @@ def next_version(version: str, level: int) -> str:
     :return: Properly incremented version
     """
     # todo: your code
-    return '0.0.1'
+    ver = parse_version(version)
+    if level == 2:
+        ver[2] += 1
+    elif level == 1:
+        ver[1] += 1
+        ver[2] = 0
+    else:
+        ver[0] += 1
+        ver[1] = 0
+        ver[2] = 0
+    return verbose_version(ver)

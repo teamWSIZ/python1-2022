@@ -21,5 +21,7 @@ b = [1, 5, 1]  (teraz na ostatniej pozycji odjęliśmy 5, czyli a[1])
 
 
 def equalize_parity(a: list[int]) -> bool:
-    if len(a) > 10: return False
-    return True
+    parities = [x % 2 == 0 for x in a]
+    if all(parities) or (not any(parities)):
+        return True
+    return min(a) % 2 == 1
