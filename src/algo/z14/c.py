@@ -4,7 +4,7 @@ from src.algo.z14.b import make_move
 moves = [(-2, -1), (-2, 1), (-1, -2), (-1, 2), (1, -2), (1, 2), (2, -1), (2, 1)]
 
 
-def gen_new_positions(position: tuple[int, int], max_dim: tuple[int, int]) -> list[tuple[int, int]]:
+def gen_new_positions(position: tuple , max_dim: tuple) -> list:
     ans = []
     for m in moves:
         p = make_move(position, m)
